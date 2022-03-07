@@ -1,0 +1,18 @@
+{
+  "name": "actionapiparser",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "js2xmlparser": "^4.0.2",
+    "request": "^2.88.2",
+    "xml2js": "^0.4.23",
+    "xml2js-force-cdata": "^1.0.0"
+  }
+}
