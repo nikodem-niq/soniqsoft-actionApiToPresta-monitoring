@@ -12,3 +12,7 @@ module.exports.parseDataToXML = (dataToParse) => {
     const xml = builder.buildObject(dataToParse);
     console.log(xml);
 }
+
+module.exports.parseXMLToJs = (xml, callback) => {
+    return xml2js.parseString(xml, callback);
+}

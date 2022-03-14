@@ -1,79 +1,69 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
-<product>
-	<id_category_default xlink:href="http://localhost/presta-demo/api/categories/9"><![CDATA[10]]></id_category_default>
-	<id_default_image xlink:href="http://localhost/presta-demo/api/images/products/6/6" notFilterable="true"><![CDATA[6]]></id_default_image>
-	<type notFilterable="true"><![CDATA[simple]]></type>
-	<id_shop_default><![CDATA[1]]></id_shop_default>
-	<reference><![CDATA[demo_11]]></reference>
-	<width><![CDATA[0.000000]]></width>
-	<height><![CDATA[0.000000]]></height>
-	<depth><![CDATA[0.000000]]></depth>
-	<weight><![CDATA[0.300000]]></weight>
-	<ean13><![CDATA[]]></ean13>
-	<isbn><![CDATA[]]></isbn>
-	<upc><![CDATA[]]></upc>
-	<mpn><![CDATA[]]></mpn>
-	<product_type><![CDATA[standard]]></product_type>
-	<online_only><![CDATA[0]]></online_only>
-	<minimal_quantity><![CDATA[1]]></minimal_quantity>
-	<price><![CDATA[100]]></price>
-	<wholesale_price><![CDATA[0.000000]]></wholesale_price>
-	<additional_shipping_cost><![CDATA[0.000000]]></additional_shipping_cost>
-	<customizable><![CDATA[0]]></customizable>
-	<text_fields><![CDATA[0]]></text_fields>
-	<uploadable_files><![CDATA[0]]></uploadable_files>
-	<active><![CDATA[1]]></active>
-	<redirect_type><![CDATA[301-category]]></redirect_type>
-	<id_type_redirected><![CDATA[0]]></id_type_redirected>
-	<available_for_order><![CDATA[1]]></available_for_order>
-	<available_date><![CDATA[0000-00-00]]></available_date>
-	<show_condition><![CDATA[0]]></show_condition>
-	<condition><![CDATA[new]]></condition>
-	<show_price><![CDATA[1]]></show_price>
-	<indexed><![CDATA[1]]></indexed>
-	<visibility><![CDATA[both]]></visibility>
-	<advanced_stock_management><![CDATA[0]]></advanced_stock_management>
-	<date_add><![CDATA[2022-03-04 12:52:42]]></date_add>
-	<date_upd><![CDATA[2022-03-04 12:52:42]]></date_upd>
-	<pack_stock_type><![CDATA[3]]></pack_stock_type>
-	<meta_description><language id="1" xlink:href="http://localhost/presta-demo/api/languages/1"><![CDATA[]]></language><language id="2" xlink:href="http://localhost/presta-demo/api/languages/2"><![CDATA[]]></language></meta_description>
-	<meta_keywords><language id="1" xlink:href="http://localhost/presta-demo/api/languages/1"><![CDATA[]]></language><language id="2" xlink:href="http://localhost/presta-demo/api/languages/2"><![CDATA[]]></language></meta_keywords>
-	<meta_title><language id="1" xlink:href="http://localhost/presta-demo/api/languages/1"><![CDATA[]]></language><language id="2" xlink:href="http://localhost/presta-demo/api/languages/2"><![CDATA[]]></language></meta_title>
-	<link_rewrite><language id="1" xlink:href="http://localhost/presta-demo/api/languages/1"><![CDATA[mug-the-best-is-yet-to-come]]></language><language id="2" xlink:href="http://localhost/presta-demo/api/languages/2"><![CDATA[mug-the-best-is-yet-to-come]]></language></link_rewrite>
-	<name><language id="1" xlink:href="http://localhost/presta-demo/api/languages/1"><![CDATA[KKKKKKK]]></language><language id="2" xlink:href="http://localhost/presta-demo/api/languages/2"><![CDATA[KKKKKKK]]></language></name>
-	<description><language id="1" xlink:href="http://localhost/presta-demo/api/languages/1"><![CDATA[<p>The best is yet to come! Start the day off right with a positive thought. 8,2cm diameter / 9,5cm height / 0.43kg. Dishwasher-proof.</p>]]></language><language id="2" xlink:href="http://localhost/presta-demo/api/languages/2"><![CDATA[<p>The best is yet to come! Start the day off right with a positive thought. 8,2cm diameter / 9,5cm height / 0.43kg. Dishwasher-proof.</p>]]></language></description>
-	<description_short><language id="1" xlink:href="http://localhost/presta-demo/api/languages/1"><![CDATA[<p>White Ceramic Mug, 325ml.</p>]]></language><language id="2" xlink:href="http://localhost/presta-demo/api/languages/2"><![CDATA[<p>White Ceramic Mug, 325ml.</p>]]></language></description_short>
-	<available_now><language id="1" xlink:href="http://localhost/presta-demo/api/languages/1"><![CDATA[]]></language><language id="2" xlink:href="http://localhost/presta-demo/api/languages/2"><![CDATA[]]></language></available_now>
-	<available_later><language id="1" xlink:href="http://localhost/presta-demo/api/languages/1"><![CDATA[]]></language><language id="2" xlink:href="http://localhost/presta-demo/api/languages/2"><![CDATA[]]></language></available_later>
-<associations>
-<categories nodeType="category" api="categories">
-	<category xlink:href="http://localhost/presta-demo/api/categories/10">
-	<id><![CDATA[10]]></id>
-	</category>
-</categories>
-<images nodeType="image" api="images">
-	<image xlink:href="http://localhost/presta-demo/api/images/products/6/6">
-	<id><![CDATA[6]]></id>
-	</image>
-</images>
-<combinations nodeType="combination" api="combinations"/>
-<product_option_values nodeType="product_option_value" api="product_option_values"/>
-<product_features nodeType="product_feature" api="product_features">
-	<product_feature xlink:href="http://localhost/presta-demo/api/product_features/1">
-	<id><![CDATA[1]]></id>
-	<id_feature_value xlink:href="http://localhost/presta-demo/api/product_feature_values/3"><![CDATA[3]]></id_feature_value>
-	</product_feature>
-</product_features>
-<tags nodeType="tag" api="tags"/>
-<stock_availables nodeType="stock_available" api="stock_availables">
-	<stock_available xlink:href="http://localhost/presta-demo/api/stock_availables/29">
-	<id><![CDATA[29]]></id>
-	<id_product_attribute><![CDATA[13]]></id_product_attribute>
-	</stock_available>
-</stock_availables>
-<accessories nodeType="product" api="products"/>
-<product_bundle nodeType="product" api="products"/>
-</associations>
-</product>
-</prestashop>
+        <prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
+            <product>
+                <id_category_default xlink:href="http://localhost/presta-demo/api/categories/3"><![CDATA[3]]></id_category_default>
+                <id_default_image xlink:href="http://localhost/presta-demo/api/images/products/6/6" notFilterable="true"><![CDATA[6]]></id_default_image>
+                <type notFilterable="true"><![CDATA[simple]]></type>
+                <id_shop_default><![CDATA[1]]></id_shop_default>
+                <width><![CDATA[${product.sizeX}]]></width>
+                <height><![CDATA[${product.sizeY}]]></height>
+                <depth><![CDATA[${product.sizeZ}]]></depth>
+                <weight><![CDATA[${product.weight}]]></weight>
+                <ean13><![CDATA[${product.ean}]]></ean13>
+                <isbn><![CDATA[]]></isbn>
+                <upc><![CDATA[]]></upc>
+                <mpn><![CDATA[]]></mpn>
+                <product_type><![CDATA[standard]]></product_type>
+                <online_only><![CDATA[0]]></online_only>
+                <minimal_quantity><![CDATA[1]]></minimal_quantity>
+                <price><![CDATA[${product.price}]]></price>
+                <text_fields><![CDATA[0]]></text_fields>
+                <active><![CDATA[1]]></active>
+                <available_for_order><![CDATA[1]]></available_for_order>
+                <condition><![CDATA[new]]></condition>
+                <show_price><![CDATA[1]]></show_price>
+                <indexed><![CDATA[1]]></indexed>
+                <visibility><![CDATA[both]]></visibility>
+                <advanced_stock_management><![CDATA[0]]></advanced_stock_management>
+                <date_add><![CDATA[${moment(Date.now()).format('YYYY-MM-DD HH:mm:ss')}]]></date_add>
+                <date_upd><![CDATA[${moment(Date.now()).format('YYYY-MM-DD HH:mm:ss')}]]></date_upd>
+                <pack_stock_type><![CDATA[3]]></pack_stock_type>
+                <meta_description><language id="1" xlink:href="http://localhost/presta-demo/api/languages/1"><![CDATA[]]></language><language id="2" xlink:href="http://localhost/presta-demo/api/languages/2"><![CDATA[]]></language></meta_description>
+                <meta_keywords><language id="1" xlink:href="http://localhost/presta-demo/api/languages/1"><![CDATA[]]></language><language id="2" xlink:href="http://localhost/presta-demo/api/languages/2"><![CDATA[]]></language></meta_keywords>
+                <meta_title><language id="1" xlink:href="http://localhost/presta-demo/api/languages/1"><![CDATA[]]></language><language id="2" xlink:href="http://localhost/presta-demo/api/languages/2"><![CDATA[]]></language></meta_title>
+                <link_rewrite><language id="1" xlink:href="http://localhost/presta-demo/api/languages/1"><![CDATA[mug-the-best-is-yet-to-come]]></language><language id="2" xlink:href="http://localhost/presta-demo/api/languages/2"><![CDATA[mug-the-best-is-yet-to-come]]></language></link_rewrite>
+                <name><language id="1" xlink:href="http://localhost/presta-demo/api/languages/1"><![CDATA[${product.productName}]]></language><language id="2" xlink:href="http://localhost/presta-demo/api/languages/2"><![CDATA[${product.name}]]></language></name>
+                <description><language id="1" xlink:href="http://localhost/presta-demo/api/languages/1"><![CDATA[<p>The best is yet to come! Start the day off right with a positive thought. 8,2cm diameter / 9,5cm height / 0.43kg. Dishwasher-proof.</p>]]></language><language id="2" xlink:href="http://localhost/presta-demo/api/languages/2"><![CDATA[<p>The best is yet to come! Start the day off right with a positive thought. 8,2cm diameter / 9,5cm height / 0.43kg. Dishwasher-proof.</p>]]></language></description>
+                <description_short><language id="1" xlink:href="http://localhost/presta-demo/api/languages/1"><![CDATA[<p>White Ceramic Mug, 325ml.</p>]]></language><language id="2" xlink:href="http://localhost/presta-demo/api/languages/2"><![CDATA[<p>White Ceramic Mug, 325ml.</p>]]></language></description_short>
+                <available_now><language id="1" xlink:href="http://localhost/presta-demo/api/languages/1"><![CDATA[]]></language><language id="2" xlink:href="http://localhost/presta-demo/api/languages/2"><![CDATA[]]></language></available_now>
+                <available_later><language id="1" xlink:href="http://localhost/presta-demo/api/languages/1"><![CDATA[]]></language><language id="2" xlink:href="http://localhost/presta-demo/api/languages/2"><![CDATA[]]></language></available_later>
+            <associations>
+            <categories nodeType="category" api="categories">
+                <category xlink:href="http://localhost/presta-demo/api/categories/3">
+                <id><![CDATA[3]]></id>
+                </category>
+            </categories>
+            <images nodeType="image" api="images">
+                <image xlink:href="http://localhost/presta-demo/api/images/products/6/6">
+                <id><![CDATA[6]]></id>
+                </image>
+            </images>
+            <combinations nodeType="combination" api="combinations"/>
+            <product_option_values nodeType="product_option_value" api="product_option_values"/>
+            <product_features nodeType="product_feature" api="product_features">
+                <product_feature xlink:href="http://localhost/presta-demo/api/product_features/1">
+                <id><![CDATA[1]]></id>
+                <id_feature_value xlink:href="http://localhost/presta-demo/api/product_feature_values/1"><![CDATA[1]]></id_feature_value>
+                </product_feature>
+            </product_features>
+            <tags nodeType="tag" api="tags"/>
+            <stock_availables nodeType="stock_available" api="stock_availables">
+                <stock_available xlink:href="http://localhost/presta-demo/api/stock_availables/29">
+                <id><![CDATA[29]]></id>
+                <id_product_attribute><![CDATA[13]]></id_product_attribute>
+                </stock_available>
+            </stock_availables>
+            <accessories nodeType="product" api="products"/>
+            <product_bundle nodeType="product" api="products"/>
+            </associations>
+            </product>
+        </prestashop>

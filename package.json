@@ -9,8 +9,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.26.1",
     "dotenv": "^16.0.0",
+    "form-data": "^4.0.0",
+    "got": "^11.8.2",
     "js2xmlparser": "^4.0.2",
+    "moment": "^2.29.1",
+    "node-libcurl": "^2.3.4",
+    "qs": "^6.10.3",
     "request": "^2.88.2",
     "xml2js": "^0.4.23",
     "xml2js-force-cdata": "^1.0.0"

@@ -12,3 +12,27 @@ module.exports.doRequest = (url) => {
         })
     })
 }
+
+module.exports.postRequest = (url, body) => {
+    return new Promise((resolve,reject) => {
+        request.post(url, {headers: {method: 'post', 'Content-Type': 'text/xml'}, body}, (err,res,body) => {
+            if(!err) {
+                resolve(res);
+            } else {
+                reject(err);
+            }
+        })
+    })
+}
+
+module.exports.putRequest = (url, body) => {
+    return new Promise((resolve,reject) => {
+        request.put(url, {headers: {method: 'put', 'Content-Type': 'text/xml'}, body}, (err,res,body) => {
+            if(!err) {
+                resolve(res);
+            } else {
+                reject(err);
+            }
+        })
+    })
+}

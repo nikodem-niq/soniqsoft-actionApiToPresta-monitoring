@@ -1,6 +1,14 @@
 const { config } = require("../../config");
 const { doRequest } = require('../../middlewares/doRequest');
 
+module.exports.getListOfProducts = async (params) => {
+    return new Promise(async resolve => {
+        const responseForAllProducts = await doRequest(`${config.baseUrl}/Product/${params}`);
+        const { data } = JSON.parse(responseForAllProducts.body);
+        resolve(data);
+    })
+}
+
 module.exports.getProductDetails = async (params) => {
     return new Promise(async resolve => {
         const detailsArray = [];

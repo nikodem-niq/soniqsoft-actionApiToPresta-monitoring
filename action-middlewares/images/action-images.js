@@ -1,5 +1,5 @@
 const { config } = require("../../config");
-const { doRequest } = require("../../main");
+const { doRequest } = require("../../middlewares/doRequest");
 
 
 module.exports.getImgForProduct = async id => {
