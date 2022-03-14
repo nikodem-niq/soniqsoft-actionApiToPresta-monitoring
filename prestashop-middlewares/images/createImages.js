@@ -4,6 +4,7 @@ const { downloadImages } = require("./downloadImages");
 const fs = require('fs');
 const FormData = require('form-data');
 const { promisify } = require("util");
+const { resolve } = require("path");
 const readDir = promisify(fs.readdir);
 const readFile = promisify(fs.readFile)
 const unlinkFile = promisify(fs.unlink)
@@ -20,22 +21,26 @@ module.exports.createImages = async (productId_action, productId_presta) => {
     }
 }
 
-module.exports.deleteImagesLocal = async () => {
-    const files = await readDir('./prestashop-middlewares/images/tmp_images');
-    for await(file of files) {
-        try {
-            unlinkFile(`./prestashop-middlewares/images/tmp_images/${file}`, (err) => {
-                if(err) {
-                    throw new Error(err);
-                }
-    
-                console.log(`file removed`);
-            })
-        } catch(err) {
-            // lOG WHY WONT DELETED
-        }
-    }
-}
+// module.exports.deleteImagesLocal = async () => {
+//     const files = await readDir('./prestashop-middlewares/images/tmp_images');
+//     for await(file of files) {
+//         try {
+//             return new Promise(resolve => {
+//                 unlinkFile(`./prestashop-middlewares/images/tmp_images/${file}`, (err) => {
+//                     if(err) {
+//                         throw new Error(err);
+//                     }
+        
+//                     console.log(`file removed`);
+//                 })
+//                 resolve('files have been deleted')
+//             })
+//         } catch(err) {
+//             // lOG WHY WONT DELETED
+//         }
+//     }
+// }
+
 module.exports.saveImagesToPresta = async (productId_presta) => {
     const files = await readDir('./prestashop-middlewares/images/tmp_images');
     for await(file of files) {
@@ -54,6 +59,13 @@ module.exports.saveImagesToPresta = async (productId_presta) => {
 
         try {
             const res = await req();
+            unlinkFile(`./prestashop-middlewares/images/tmp_images/${file}`, (err) => {
+                if(err) {
+                    throw new Error(err);
+                }
+    
+                console.log(`file removed`);
+            })
             if(res.statusCode != 200) {
                 // log to LOGS!!!!
             }
@@ -63,5 +75,6 @@ module.exports.saveImagesToPresta = async (productId_presta) => {
         }
     }
     
-    await this.deleteImagesLocal();
+
+    // await this.deleteImagesLocal();
 } 
