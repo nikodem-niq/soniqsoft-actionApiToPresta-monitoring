@@ -5,7 +5,7 @@ const { config } = require("../../config");
 module.exports.downloadImages = async (cdn_photo, iterator) => {
     return new Promise((resolve,reject) => {
         const download = (_url, path, callback) => {
-            request.head(_url, (err, res, body) => {
+            request.head(_url, async (err, res, body) => {
               request(_url)
                 .pipe(fs.createWriteStream(path))
                 .on('close', callback)

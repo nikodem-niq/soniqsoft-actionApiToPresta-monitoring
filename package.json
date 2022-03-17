@@ -18,6 +18,8 @@
     "node-libcurl": "^2.3.4",
     "qs": "^6.10.3",
     "request": "^2.88.2",
+    "resize-img": "^2.0.0",
+    "slugify": "^1.6.5",
     "xml2js": "^0.4.23",
     "xml2js-force-cdata": "^1.0.0"
   }

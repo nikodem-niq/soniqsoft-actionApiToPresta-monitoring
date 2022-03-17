@@ -19,5 +19,6 @@ module.exports.config = {
         UID: process.env.UID,
         PID: process.env.PID,
     },
-    category_317: `GetByCategory?CategoryId=317&Language=Polish`
+    category_317: `GetByCategory?CategoryId=317&Language=Polish`,
+    notebooks_category_number: 3
 }

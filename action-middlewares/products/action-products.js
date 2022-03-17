@@ -28,3 +28,12 @@ module.exports.getProductDetails = async (params) => {
         resolve(detailsArray);
     })
 }
+
+module.exports.getProductDetailsById = async (params) => {
+    return new Promise(async (resolve, reject) => {
+        const responseForProduct = await doRequest(`${config.baseUrl}/ProductTechnicalSpecification/GetTreeForProduct?Language=Polish&ProductId=${params}`);
+        const detailsAboutProduct = await (JSON.parse(responseForProduct.body)["data"]);
+    
+        resolve(detailsAboutProduct);
+    })
+}
