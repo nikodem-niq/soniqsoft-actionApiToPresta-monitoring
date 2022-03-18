@@ -13,7 +13,7 @@ module.exports.createProduct = async () => {
     const products = await getListOfProducts(config.category_317);
     // const productDetails = await getProductDetails(config.category_317);
     // console.log(products[0].quantity)
-    for await(product of products.slice(12,13)) {
+    for await(product of products) { // CHANGE products.slice.... to products
         // console.log(product)
         try {
             if(product === undefined || product === null) {
@@ -35,41 +35,13 @@ const postProduct = async (product) => {
     return new Promise(async (resolve, reject) => {
 
         const details = await getProductDetailsById(product.productId);
-        // console.log(details);
         let htmlDesc = ``
         for(detail of details.sections) {
-            switch(detail.name) {
-                case 'Procesor':
-                    htmlDesc += `<b>Procesor</b><ul>`
-                    for(attribute of detail.attributes) {
-                        htmlDesc += `<li>${attribute.name}: ${attribute.values[0]}</li>`
-                    }
-                    htmlDesc += `</ul><br><br>`
-                    break;
-                case 'Grafika':
-                    htmlDesc += `<b>Grafika</b><ul>`
-                    for(attribute of detail.attributes) {
-                        htmlDesc += `<li>${attribute.name}: ${attribute.values[0]}</li>`
-                    }
-                    htmlDesc += `</ul><br><br>`
-                    break;
-                case 'Pamięć':
-                    htmlDesc += `<b>Pamięć</b><ul>`
-                    for(attribute of detail.attributes) {
-                        htmlDesc += `<li>${attribute.name}: ${attribute.values[0]}</li>`
-                    }
-                    htmlDesc += `</ul><br><br>`
-                    break;
-                case 'Waga i rozmiary':
-                    htmlDesc += `<b>Waga i rozmiary</b><ul>`
-                    for(attribute of detail.attributes) {
-                        htmlDesc += `<li>${attribute.name}: ${attribute.values[0]}</li>`
-                    }
-                    htmlDesc += `</ul><br><br>`
-                    break;
-                default:
-                    break;
+            htmlDesc += `<b>${detail.name}</b><ul>`
+            for(attribute of detail.attributes) {
+                htmlDesc += `<li>${attribute.name}: ${attribute.values[0]}</li>`
             }
+            htmlDesc += `</ul><br><br>`
         }
 
         const xmlProductSchema = `
@@ -97,7 +69,7 @@ const postProduct = async (product) => {
                     <date_upd><![CDATA[${moment(Date.now()).format('YYYY-MM-DD HH:mm:ss')}]]></date_upd>
                     <meta_description><language id="1" xlink:href="http://localhost/presta-demo/api/languages/1"><![CDATA[]]></language><language id="2" xlink:href="http://localhost/presta-demo/api/languages/2"><![CDATA[]]></language></meta_description>
                     <meta_keywords><language id="1" xlink:href="http://localhost/presta-demo/api/languages/1"><![CDATA[]]></language><language id="2" xlink:href="http://localhost/presta-demo/api/languages/2"><![CDATA[]]></language></meta_keywords>
-                    <meta_title><language id="1" xlink:href="http://localhost/presta-demo/api/languages/1"><![CDATA[]]></language><language id="2" xlink:href="http://localhost/presta-demo/api/languages/2"><![CDATA[]]></language></meta_title>
+                    <meta_title><language id="1" xlink:href="http://localhost/presta-demo/api/languages/1"><![CDATA[${product.productId}]]></language><language id="2" xlink:href="http://localhost/presta-demo/api/languages/2"><![CDATA[${product.productId}]]></language></meta_title>
                     <name><language id="1" xlink:href="http://localhost/presta-demo/api/languages/1"><![CDATA[${product.productName.length > 128 ? product.productName.slice(0,128) : product.productName}]]></language><language id="2" xlink:href="http://localhost/presta-demo/api/languages/2"><![CDATA[${product.productName.length > 128 ? product.productName.slice(0,128) : product.productName}]]></language></name>
                     <description>
                     <language id="1"><![CDATA[${htmlDesc}]]></language>

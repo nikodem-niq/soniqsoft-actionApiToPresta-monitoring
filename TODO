@@ -1,5 +1,11 @@
-IMG NIE SA SCIAGANE ASYNCHRONICZNIE!@#!@#!@#!@#!@#!@#!@#!@#
+IMG NIE SA SCIAGANE ASYNCHRONICZNIE!@#!@#!@#!@#!@#!@#!@#!@# -> DONE
 
-usuwanie zdjec
+usuwanie zdjec -> DONE
 
-featuresy dla produktow
+featuresy dla produktow -> DONE
+
+----------------------------------------
+
+Dodawanie wszystkich produktow, nawet stock 0, a nastepnie monitorowanie czy stock sie zmienil
+MONITORING action<->presta i PUT zmian
+

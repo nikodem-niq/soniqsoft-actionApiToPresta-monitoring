@@ -1,4 +1,5 @@
 const { getProductDetails, getListOfProducts } = require('./action-middlewares/products/action-products');
+const { everyOneSecJob, monitorTest } = require('./monitoring/monitorProduct');
 
 const { createFeatures } = require('./prestashop-middlewares/features/createFeatures');
 const { retrieveFeatures, retrieveFeatureValues, retrieveFeatureById, retrieveFeatureValueById } = require('./prestashop-middlewares/features/retrieveFeatures');
@@ -31,4 +32,9 @@ const { retrieveProducts, retrieveProductById } = require('./prestashop-middlewa
 //     console.log(result);
 // })
 
-createProduct();
+
+
+// createProduct();
+
+// everyOneSecJob.start();
+monitorTest();
