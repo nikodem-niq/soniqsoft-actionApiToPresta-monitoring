@@ -4,8 +4,10 @@ usuwanie zdjec -> DONE
 
 featuresy dla produktow -> DONE
 
+Dodawanie wszystkich produktow, nawet stock 0, a nastepnie monitorowanie czy stock sie zmienil -> DONE
+
+MONITORING action<->presta i PUT zmian -> DONE
+
 ----------------------------------------
 
-Dodawanie wszystkich produktow, nawet stock 0, a nastepnie monitorowanie czy stock sie zmienil
-MONITORING action<->presta i PUT zmian
 

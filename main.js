@@ -1,40 +1,20 @@
-const { getProductDetails, getListOfProducts } = require('./action-middlewares/products/action-products');
-const { everyOneSecJob, monitorTest } = require('./monitoring/monitorProduct');
-
-const { createFeatures } = require('./prestashop-middlewares/features/createFeatures');
-const { retrieveFeatures, retrieveFeatureValues, retrieveFeatureById, retrieveFeatureValueById } = require('./prestashop-middlewares/features/retrieveFeatures');
-const { testShow } = require('./prestashop-middlewares/images/createImages');
-
+const { hourlyJob, monitorTest } = require('./monitoring/monitorProduct');
 const { createProduct } = require('./prestashop-middlewares/products/createProduct');
-const { retrieveProducts, retrieveProductById } = require('./prestashop-middlewares/products/retrieveProducts');
 
 
-// getProductDetails(`GetByCategory?CategoryId=317&Language=Polish`).then(res => {
-//     createFeatures(res);
-// })
-
-// retrieveFeatureValueById(1,(result) => {
-//     console.log(result);
-// });
-
-// getListOfProducts(`GetByCategory?CategoryId=317&Language=Polish`).then(res => {
-
-//     console.log(res)
-// });
-
-// getProductDetails(`GetByCategory?CategoryId=317&Language=Polish`).then(res => {
-//     console.log(res[0]);
-// })
-
-// testShow('MOBACENOT1995');
-
-// retrieveProductById(33,(result) => {
-//     console.log(result);
-// })
-
-
-
-createProduct();
-
-// everyOneSecJob.start();
-// monitorTest();
+// Check for argvs
+const Args = process.argv.slice(2);
+if(Args) {
+    switch(Args[0]) {
+        case 'create_product':
+            createProduct();
+            break;
+        case 'monitor_start':
+            hourlyJob.start();
+            // monitorTest();
+            break;
+        default:
+            console.log(`no args specified`);
+            break;
+    }
+}
