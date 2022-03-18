@@ -22,6 +22,7 @@
     "request": "^2.88.2",
     "resize-img": "^2.0.0",
     "slugify": "^1.6.5",
+    "winston": "^3.6.0",
     "xml2js": "^0.4.23",
     "xml2js-force-cdata": "^1.0.0"
   }

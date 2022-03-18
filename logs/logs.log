@@ -1,0 +1,59 @@
+{"level":"info","message":"2022-03-18 13:03:29 | added product (id: 23) 201"}
+{"level":"info","message":"2022-03-18 13:03:33 | changed stock for product 23, status: 200"}
+{"level":"info","message":"2022-03-18 13:03:33 | downloading image 1 for 23"}
+{"level":"info","message":"2022-03-18 13:03:35 | downloading image 2 for 23"}
+{"level":"info","message":"2022-03-18 13:03:36 | downloading image 3 for 23"}
+{"level":"info","message":"2022-03-18 13:03:37 | downloading image 4 for 23"}
+{"level":"info","message":"2022-03-18 13:03:38 | downloading image 5 for 23"}
+{"level":"info","message":"2022-03-18 13:03:38 | downloading image 6 for 23"}
+{"level":"info","message":"2022-03-18 13:03:39 | downloading image 7 for 23"}
+{"level":"info","message":"2022-03-18 13:03:40 | downloading image 8 for 23"}
+{"level":"info","message":"2022-03-18 13:03:51 | saving image_1.png for 23........"}
+{"level":"info","message":"2022-03-18 13:03:52 | img image_1.png for 23 - 200"}
+{"level":"info","message":"2022-03-18 13:03:52 | saving image_2.png for 23........"}
+{"level":"info","message":"2022-03-18 13:03:53 | img image_2.png for 23 - 200"}
+{"level":"info","message":"2022-03-18 13:03:53 | saving image_3.png for 23........"}
+{"level":"info","message":"2022-03-18 13:03:54 | img image_3.png for 23 - 200"}
+{"level":"info","message":"2022-03-18 13:03:54 | saving image_4.png for 23........"}
+{"level":"info","message":"2022-03-18 13:03:54 | img image_4.png for 23 - 200"}
+{"level":"info","message":"2022-03-18 13:03:54 | saving image_5.png for 23........"}
+{"level":"info","message":"2022-03-18 13:03:55 | img image_5.png for 23 - 200"}
+{"level":"info","message":"2022-03-18 13:03:55 | saving image_6.png for 23........"}
+{"level":"info","message":"2022-03-18 13:03:55 | img image_6.png for 23 - 200"}
+{"level":"info","message":"2022-03-18 13:03:55 | saving image_7.png for 23........"}
+{"level":"info","message":"2022-03-18 13:03:56 | img image_7.png for 23 - 200"}
+{"level":"info","message":"2022-03-18 13:03:56 | saving image_8.png for 23........"}
+{"level":"info","message":"2022-03-18 13:03:57 | img image_8.png for 23 - 200"}
+{"level":"info","message":"2022-03-18 13:03:57 | ADDING: MOBACENOT1998 has quantity 0"}
+{"level":"info","message":"2022-03-18 13:03:57 | added product (id: 24) 201"}
+{"level":"info","message":"2022-03-18 13:04:02 | changed stock for product 24, status: 200"}
+{"level":"info","message":"2022-03-18 13:04:02 | downloading image 1 for 24"}
+{"level":"info","message":"2022-03-18 13:04:03 | downloading image 2 for 24"}
+{"level":"info","message":"2022-03-18 13:04:05 | downloading image 3 for 24"}
+{"level":"info","message":"2022-03-18 13:04:08 | downloading image 4 for 24"}
+{"level":"info","message":"2022-03-18 13:04:08 | downloading image 5 for 24"}
+{"level":"info","message":"2022-03-18 13:04:09 | downloading image 6 for 24"}
+{"level":"info","message":"2022-03-18 13:04:10 | downloading image 7 for 24"}
+{"level":"info","message":"2022-03-18 13:04:15 | saving image_1.png for 24........"}
+{"level":"info","message":"2022-03-18 13:04:16 | img image_1.png for 24 - 200"}
+{"level":"info","message":"2022-03-18 13:04:16 | saving image_2.png for 24........"}
+{"level":"info","message":"2022-03-18 13:04:17 | img image_2.png for 24 - 200"}
+{"level":"info","message":"2022-03-18 13:04:17 | saving image_3.png for 24........"}
+{"level":"info","message":"2022-03-18 13:04:18 | img image_3.png for 24 - 200"}
+{"level":"info","message":"2022-03-18 13:04:18 | saving image_4.png for 24........"}
+{"level":"info","message":"2022-03-18 13:04:18 | img image_4.png for 24 - 200"}
+{"level":"info","message":"2022-03-18 13:04:18 | saving image_5.png for 24........"}
+{"level":"info","message":"2022-03-18 13:04:19 | img image_5.png for 24 - 200"}
+{"level":"info","message":"2022-03-18 13:04:19 | saving image_6.png for 24........"}
+{"level":"info","message":"2022-03-18 13:04:20 | img image_6.png for 24 - 200"}
+{"level":"info","message":"2022-03-18 13:04:20 | saving image_7.png for 24........"}
+{"level":"info","message":"2022-03-18 13:04:20 | img image_7.png for 24 - 200"}
+{"level":"info","message":"2022-03-18 13:04:21 | added product (id: 25) 201"}
+{"level":"info","message":"2022-03-18 13:04:25 | changed stock for product 25, status: 200"}
+{"level":"info","message":"2022-03-18 13:04:25 | downloading image 1 for 25"}
+{"level":"info","message":"2022-03-18 13:04:28 | downloading image 2 for 25"}
+{"level":"info","message":"2022-03-18 13:04:29 | downloading image 3 for 25"}
+{"level":"info","message":"2022-03-18 13:04:30 | downloading image 4 for 25"}
+{"level":"info","message":"2022-03-18 13:04:31 | downloading image 5 for 25"}
+{"level":"info","message":"2022-03-18 13:04:31 | downloading image 6 for 25"}
+{"level":"info","message":"2022-03-18 13:04:32 | downloading image 7 for 25"}

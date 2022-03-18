@@ -34,7 +34,7 @@ const { retrieveProducts, retrieveProductById } = require('./prestashop-middlewa
 
 
 
-// createProduct();
+createProduct();
 
 // everyOneSecJob.start();
-monitorTest();
+// monitorTest();

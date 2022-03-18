@@ -4,6 +4,7 @@ const fs = require('fs');
 const FormData = require('form-data');
 const { promisify } = require("util");
 const resizeImg = require('resize-img');
+const { logger, log } = require("../../logs/logger");
 
 const readDir = promisify(fs.readdir);
 const readFile = promisify(fs.readFile)
@@ -16,6 +17,7 @@ module.exports.createImages = async (productId_action, productId_presta) => {
         try {
             const images = await getImgForProduct(productId_action);
             for(image in images) {
+                log('info', `downloading image ${parseInt(image)+1} for ${productId_presta}`)
                 console.log(`downloading image ${parseInt(image)+1} for ${productId_presta}`)
                 await downloadImages(images[image], image);
             }
@@ -38,7 +40,6 @@ module.exports.resizeImages = async () => {
             })
 
             fs.writeFileSync(`./prestashop-middlewares/images/tmp_images/${image}`, resizedImage);
-            // console.log(image)
         }
         resolve('images has been resized');
     })
@@ -48,6 +49,7 @@ module.exports.saveImagesToPresta = async (productId_presta) => {
     return new Promise(async (resolve, reject) => {
         const files = await readDir('./prestashop-middlewares/images/tmp_images');
         for await(file of files) {
+            log('info', `saving ${file} for ${productId_presta}........`)
             console.log(`saving ${file} for ${productId_presta}........`);
             const file_read = await readFile(`./prestashop-middlewares/images/tmp_images/${file}`);
     
@@ -67,15 +69,11 @@ module.exports.saveImagesToPresta = async (productId_presta) => {
                 do {
                     res = await req();
                     if(res.statusCode != 200) {
+                        log('info', `${res.statusCode} error... trying to reconnect (image saving)`)
                         console.error(`${res.statusCode} error... trying to reconnect`)
-                        // console.log(res)
-                        // fs.writeFile('./logs/logs.txt', JSON.stringify(res), (err) => {
-                        //     if(err) {
-                        //         console.log(err);
-                        //     }
-                        // })
                     } else {
                         console.log(`img ${file} for ${productId_presta} - ${res.statusCode}`);
+                        log('info', `img ${file} for ${productId_presta} - ${res.statusCode}`)
                     }
                 } while(res.statusCode != 200)
             } catch(err) {

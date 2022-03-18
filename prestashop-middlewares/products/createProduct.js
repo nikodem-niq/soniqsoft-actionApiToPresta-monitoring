@@ -6,6 +6,7 @@ const { parseXMLToJs } = require("../../middlewares/parser");
 const fs = require('fs');
 const { createImages } = require("../images/createImages");
 const { default: slugify } = require("slugify");
+const { logger, log } = require("../../logs/logger");
 
 
 
@@ -17,16 +18,19 @@ module.exports.createProduct = async () => {
         // console.log(product)
         try {
             if(product === undefined || product === null) {
+                log('info', `POMIJAM PRODUKT (undefined)`)
                 console.log('POMIJAM PRODUKT (undefined)')
             } else {             
                 if(product.quantity == 0) {
-                    console.log(`${product.productId} has quantity 0, it won't be added`);
+                    log('info', `ADDING: ${product.productId} has quantity 0`)
+                    console.log(`${product.productId} has quantity 0`);
+                    await postProduct(product);
                 } else {
                     await postProduct(product);
                 }
             }
         } catch(err) {
-            fs.createWriteStream('./logs/logs.txt').write(toString(err));
+            log('error', err)
         }
     }
 }
@@ -90,10 +94,10 @@ const postProduct = async (product) => {
 
             const productReq = await postRequest(`${config.prestaDemoApiUrl}/products?ws_key=${process.env.PRESTA_WEB_TOKEN}`, xmlProductSchema);
             parseXMLToJs(productReq.body, async (err,result) => {
-                // console.log(productReq.statusCode)
                 try {
                     resolve(changeStockOfProduct(result.prestashop.product[0].id[0], product.quantity, product));
                     console.log(`added product (id: ${result.prestashop.product[0].id[0]}) ${productReq.statusCode}`)
+                    log('info', `added product (id: ${result.prestashop.product[0].id[0]}) ${productReq.statusCode}`)
                     // console.log(result);
                 } catch(err) {
                     console.log(err);
@@ -134,10 +138,11 @@ const changeStockOfProduct = async (productId, quantityOfProduct, productObject_
                         `
                             const changeStockReq = await putRequest(`${config.prestaDemoApiUrl}/stock_availables?ws_key=${process.env.PRESTA_WEB_TOKEN}`, xmlStockSchema);
                             console.log(`changed stock for product ${productIdInStock}, status: ${changeStockReq.statusCode}`);
+                            log('info', `changed stock for product ${productIdInStock}, status: ${changeStockReq.statusCode}`)
                             resolve(await createImages(productObject_action.productId, productIdInStock));
                         }
                     } catch(err) {
-                        fs.createWriteStream('./logs/logs.txt').write(toString(err));
+                        log('error', err)
                     }
                 })
             }
