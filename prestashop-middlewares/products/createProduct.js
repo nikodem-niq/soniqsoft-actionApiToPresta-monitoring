@@ -95,11 +95,12 @@ const postProduct = async (product) => {
             const productReq = await postRequest(`${config.prestaDemoApiUrl}/products?ws_key=${process.env.PRESTA_WEB_TOKEN}`, xmlProductSchema);
             parseXMLToJs(productReq.body, async (err,result) => {
                 try {
+                    console.log(result);
                     resolve(changeStockOfProduct(result.prestashop.product[0].id[0], product.quantity, product));
                     console.log(`added product (id: ${result.prestashop.product[0].id[0]}) ${productReq.statusCode}`)
                     log('info', `added product (id: ${result.prestashop.product[0].id[0]}) ${productReq.statusCode}`)
-                    // console.log(result);
                 } catch(err) {
+                    console.log(result);
                     console.log(err);
                 }
             })
