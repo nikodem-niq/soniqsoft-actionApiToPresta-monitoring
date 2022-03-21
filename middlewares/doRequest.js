@@ -15,7 +15,8 @@ module.exports.doRequest = (url) => {
 
 module.exports.postRequest = (url, body) => {
     return new Promise((resolve,reject) => {
-        request.post(url, {headers: {method: 'post', 'Content-Type': 'text/xml'}, body}, (err,res,body) => {
+        request.post(url, {headers: {method: 'post', 'Content-Type': 'text/xml', 'accept': '/',
+        'user-agent':'*' }, body}, (err,res,body) => {
             if(!err) {
                 resolve(res);
             } else {
@@ -27,7 +28,8 @@ module.exports.postRequest = (url, body) => {
 
 module.exports.putRequest = (url, body) => {
     return new Promise((resolve,reject) => {
-        request.put(url, {headers: {method: 'put', 'Content-Type': 'text/xml'}, body}, (err,res,body) => {
+        request.put(url, {headers: {method: 'put', 'Content-Type': 'text/xml', 'accept': '/',
+        'user-agent':'*' }, body}, (err,res,body) => {
             if(!err) {
                 resolve(res);
             } else {

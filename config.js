@@ -12,8 +12,13 @@ module.exports.config = {
         CustomerId: process.env.CID,
         UserName: process.env.UID,
         ActionApiKey: process.env.ACTION_API_TOKEN,
+        'accept': '/',
+        'user-agent':'*' 
         
     },
+    // prestaHeaders: 
+    // {  'accept': '/',
+    // 'user-agent':'*' },
     photos: {
         CID: process.env.CID,
         UID: process.env.UID,
